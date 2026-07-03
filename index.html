@@ -1,45 +1,62 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Phantom Blade Zero Guide | Combat, Bosses, Weapons, Release Info</title>
+    <title>Phantom Blade Zero Wiki | Release Countdown, Guides, Bosses, Weapons</title>
     <meta
       name="description"
-      content="An English Phantom Blade Zero guide hub for release info, combat fundamentals, weapons, Phantom Edges, bosses, walkthrough planning, and launch-day攻略 coverage."
+      content="Phantom Blade Zero Wiki is an English Phantom Blade Zero guide hub with release countdown, platform details, beginner tips, combat guides, weapons, bosses, walkthrough planning, and launch-day updates."
     />
+    <link rel="canonical" href="https://phantonbladezero.wiki/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Phantom Blade Zero Wiki" />
+    <meta property="og:description" content="Release countdown, combat guides, bosses, weapons, walkthroughs, and launch-day Phantom Blade Zero coverage." />
+    <meta property="og:url" content="https://phantonbladezero.wiki/" />
+    <meta property="og:image" content="https://phantonbladezero.wiki/assets/phantom-blade-zero-hero.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Phantom Blade Zero Guide",
-        "url": "https://example.com/",
-        "about": {
-          "@type": "VideoGame",
-          "name": "Phantom Blade Zero",
-          "genre": ["Action role-playing game", "Wuxia action"],
-          "gamePlatform": ["PC", "PlayStation 5"]
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://example.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://phantonbladezero.wiki/#website",
+            "name": "Phantom Blade Zero Wiki",
+            "url": "https://phantonbladezero.wiki/",
+            "inLanguage": "en",
+            "about": { "@id": "https://phantonbladezero.wiki/#game" },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phantonbladezero.wiki/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "VideoGame",
+            "@id": "https://phantonbladezero.wiki/#game",
+            "name": "Phantom Blade Zero",
+            "genre": ["Action role-playing game", "Kungfupunk", "Wuxia action"],
+            "gamePlatform": ["PC", "PlayStation 5"],
+            "publisher": "S-GAME"
+          }
+        ]
       }
     </script>
   </head>
   <body>
     <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Phantom Blade Zero Guide home">
+      <a class="brand" href="./" aria-label="Phantom Blade Zero Wiki home">
         <span class="brand-mark">PBZ</span>
-        <span>Guide</span>
+        <span>Phantom Blade Zero Wiki</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#guides">Guides</a>
-        <a href="#combat">Combat</a>
-        <a href="#bosses">Bosses</a>
-        <a href="#faq">FAQ</a>
+        <a href="./release-date/">Release</a>
+        <a href="./beginners-guide/">Beginner</a>
+        <a href="./combat-guide/">Combat</a>
+        <a href="./weapons/">Weapons</a>
+        <a href="./bosses/">Bosses</a>
+        <a href="./about/">About</a>
       </nav>
     </header>
 
@@ -49,14 +66,26 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">English guide hub for S-GAME's kungfupunk action RPG</p>
-          <h1 id="hero-title">Phantom Blade Zero Guide</h1>
+          <h1 id="hero-title">Phantom Blade Zero Wiki</h1>
           <p class="hero-copy">
-            Track confirmed release details, learn the combat language before launch, and jump into
-            boss, weapon, quest, and ending guides as soon as the full game lands.
+            Track the current listed release date, learn the combat language before launch, and jump
+            into boss, weapon, quest, build, and walkthrough guides as soon as the full game lands.
           </p>
+          <section class="countdown" aria-label="Countdown to current listed release date">
+            <div class="countdown-head">
+              <span>Current Listed Launch Date</span>
+              <strong>September 9, 2026</strong>
+            </div>
+            <div class="countdown-grid" data-countdown="2026-09-09T00:00:00-07:00">
+              <div><strong id="days">--</strong><span>Days</span></div>
+              <div><strong id="hours">--</strong><span>Hours</span></div>
+              <div><strong id="minutes">--</strong><span>Minutes</span></div>
+              <div><strong id="seconds">--</strong><span>Seconds</span></div>
+            </div>
+          </section>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#guides">Start Reading</a>
-            <a class="button ghost" href="#tracker">Check Status</a>
+            <a class="button primary" href="./release-date/">Release Hub</a>
+            <a class="button ghost" href="./beginners-guide/">Start Guide</a>
           </div>
           <dl class="facts">
             <div>
@@ -68,63 +97,78 @@
               <dd>PC / PS5</dd>
             </div>
             <div>
-              <dt>Focus</dt>
-              <dd>Combat-first攻略</dd>
+              <dt>Coverage</dt>
+              <dd>Launch-ready guides</dd>
             </div>
           </dl>
         </div>
       </section>
 
       <section class="ticker" aria-label="Current coverage status">
-        <span>Updated for pre-release research</span>
-        <span>Walkthrough pages unlock at launch</span>
-        <span>All unconfirmed mechanics are labeled</span>
+        <span>Domain ready: phantonbladezero.wiki</span>
+        <span>Sitemap and robots included for GSC</span>
+        <span>Unconfirmed mechanics are labeled</span>
       </section>
 
       <section class="section intro" id="guides" aria-labelledby="guides-title">
         <div class="section-head">
-          <p class="eyebrow">What players need first</p>
-          <h2 id="guides-title">Guide Architecture Built Around Search Intent</h2>
+          <p class="eyebrow">High-value guide URLs</p>
+          <h2 id="guides-title">Core Pages Built for Search Intent</h2>
           <p>
-            Phantom Blade Zero's audience will arrive from action-game comparisons, trailer hype,
-            release-date searches, and very practical launch questions: how defense works, which
-            weapon fits them, where bosses punish mistakes, and what is missable.
+            Players will search for release timing first, then platform support, combat basics,
+            weapons, bosses, and spoiler-safe walkthrough help. These pages create a clean content
+            foundation for Google Search Console while leaving room for verified launch data.
           </p>
         </div>
         <div class="guide-grid">
           <article class="guide-card featured">
             <span class="tag">Launch Priority</span>
-            <h3>Beginner's Route</h3>
+            <h3>Beginner's Guide</h3>
             <p>
-              A spoiler-light path for the first five hours: settings, difficulty choice, resource
-              habits, early weapon checks, and the fastest way to stop panic-dodging.
+              A spoiler-light route for settings, difficulty choice, combat habits, resource use,
+              early weapons, and the fastest way to stop panic-dodging.
             </p>
-            <a href="#combat">Open Combat Primer</a>
+            <a href="./beginners-guide/">Open Beginner Guide</a>
           </article>
           <article class="guide-card">
-            <span class="tag">SEO Core</span>
-            <h3>Release & Platforms</h3>
-            <p>Current launch date, PC/PS5 availability, wishlist links, editions, and preload notes.</p>
+            <span class="tag">Release</span>
+            <h3><a href="./release-date/">Release Date & Countdown</a></h3>
+            <p>Current launch date, countdown, wishlist notes, timezone caveats, and update policy.</p>
           </article>
           <article class="guide-card">
-            <span class="tag">攻略</span>
-            <h3>Weapons & Phantom Edges</h3>
-            <p>Primary blades, secondary tools, power surges, upgrade paths, and matchup notes.</p>
+            <span class="tag">Platforms</span>
+            <h3><a href="./platforms/">PC & PS5 Platforms</a></h3>
+            <p>Where the game is expected, what to verify, controller notes, and edition tracking.</p>
           </article>
           <article class="guide-card">
-            <span class="tag">攻略</span>
-            <h3>Bosses & Elites</h3>
-            <p>Telegraphs, punish windows, healing rules, checkpoints, and no-spoiler quick tips.</p>
+            <span class="tag">Combat</span>
+            <h3><a href="./combat-guide/">Combat Guide</a></h3>
+            <p>Parry, block, dodge, posture reads, punish windows, and rhythm-first fundamentals.</p>
           </article>
           <article class="guide-card">
-            <span class="tag">Maps</span>
-            <h3>Walkthrough & Side Quests</h3>
-            <p>Region routes, locked paths, side-quest consequences, missables, and ending triggers.</p>
+            <span class="tag">Weapons</span>
+            <h3><a href="./weapons/">Weapons & Phantom Edges</a></h3>
+            <p>Primary blades, secondary tools, upgrade paths, and matchup notes.</p>
+          </article>
+          <article class="guide-card">
+            <span class="tag">Bosses</span>
+            <h3><a href="./bosses/">Bosses & Elites</a></h3>
+            <p>Telegraphs, punish windows, healing rules, checkpoints, and spoiler-safe tips.</p>
+          </article>
+          <article class="guide-card">
+            <span class="tag">Walkthrough</span>
+            <h3><a href="./walkthrough/">Walkthrough</a></h3>
+            <p>Region routes, locked paths, side quests, missables, and ending triggers.</p>
           </article>
           <article class="guide-card">
             <span class="tag">Builds</span>
-            <h3>Best Skills & Builds</h3>
+            <h3><a href="./builds/">Best Builds</a></h3>
             <p>Defensive builds, aggression builds, boss-focused setups, and New Game Plus routing.</p>
+          </article>
+          <article class="guide-card">
+            <span class="tag">Trust</span>
+            <h3><a href="./about/">About This Wiki</a></h3>
+            <p>Editorial policy, sourcing standards, launch verification, and contact-style notes.</p>
           </article>
         </div>
       </section>
@@ -134,49 +178,28 @@
           <p class="eyebrow">Combat primer</p>
           <h2 id="combat-title">Teach the Rhythm Before the Moves</h2>
           <p>
-            The site should onboard players around decisions, not button lists. The current
-            pre-release material points to fast third-person combat, blocking, parrying, dodging,
-            resource pressure, primary weapons, secondary Phantom Edges, and attacks that demand
-            different defensive answers.
+            The site should onboard players around decisions, not button lists. Current public
+            material points to fast third-person action, blocking, parrying, dodging, resource
+            pressure, primary weapons, secondary Phantom Edges, and attacks that demand different
+            defensive answers.
           </p>
           <div class="combat-flow" aria-label="Combat learning path">
-            <div><span>1</span>Read attack color and posture</div>
-            <div><span>2</span>Choose block, parry, dodge, or reposition</div>
-            <div><span>3</span>Spend resource only when the punish is real</div>
-            <div><span>4</span>Convert openings with weapon-specific finishers</div>
+            <div><span>1</span>Read attack color, posture, and distance.</div>
+            <div><span>2</span>Choose block, parry, dodge, or reposition.</div>
+            <div><span>3</span>Spend resources only when the punish is real.</div>
+            <div><span>4</span>Convert openings with weapon-specific finishers.</div>
           </div>
         </div>
         <aside class="panel">
           <h3>Launch-Day Checklist</h3>
           <ul class="checklist">
-            <li>Confirm final difficulty names and mechanical differences.</li>
-            <li>Record every tutorial prompt and terminology in-game.</li>
-            <li>Build boss pages from telegraph screenshots, not vibes.</li>
-            <li>Separate spoiler-free tips from full strategy.</li>
-            <li>Track patches by version number and platform.</li>
+            <li>Confirm final release time, platform pages, and preload windows.</li>
+            <li>Record tutorial terms exactly as they appear in-game.</li>
+            <li>Build boss pages from verified footage and screenshots.</li>
+            <li>Separate spoiler-free tips from full strategies.</li>
+            <li>Track patches by date, version number, and platform.</li>
           </ul>
         </aside>
-      </section>
-
-      <section class="section" id="bosses" aria-labelledby="bosses-title">
-        <div class="section-head compact">
-          <p class="eyebrow">Boss guide template</p>
-          <h2 id="bosses-title">Every Boss Page Should Answer These Fast</h2>
-        </div>
-        <div class="boss-layout">
-          <article class="boss-card">
-            <h3>Before the Fight</h3>
-            <p>Recommended weapon, Phantom Edge, defensive habit, consumables, and spoiler toggle.</p>
-          </article>
-          <article class="boss-card">
-            <h3>Danger Moves</h3>
-            <p>Color cue, startup tell, safe answer, greedy punish, and what to do at low health.</p>
-          </article>
-          <article class="boss-card">
-            <h3>Rewards</h3>
-            <p>Weapon, armor, artifact, skill unlock, quest flag, achievement, and rematch notes.</p>
-          </article>
-        </div>
       </section>
 
       <section class="section tracker" id="tracker" aria-labelledby="tracker-title">
@@ -184,8 +207,9 @@
           <p class="eyebrow">Confirmed vs pending</p>
           <h2 id="tracker-title">Pre-Release Information Tracker</h2>
           <p>
-            A credible攻略站 for an unreleased game should be transparent. Use this table to keep
-            readers oriented as trailers, demos, previews, and patch notes change the facts.
+            A credible wiki for an unreleased game should be transparent. This tracker helps
+            readers understand which pages are based on public information and which need
+            launch-day verification.
           </p>
         </div>
         <div class="table-wrap" role="region" aria-label="Information tracker" tabindex="0">
@@ -201,17 +225,17 @@
               <tr>
                 <td>Release date</td>
                 <td><span class="status confirmed">Currently listed</span></td>
-                <td>Show date, source links, and update history.</td>
+                <td>Show date, countdown, source notes, and update history.</td>
               </tr>
               <tr>
                 <td>Combat terminology</td>
                 <td><span class="status partial">Partial</span></td>
-                <td>Explain only public terms; revise after hands-on capture.</td>
+                <td>Explain public terms only; revise after hands-on capture.</td>
               </tr>
               <tr>
                 <td>Boss roster</td>
                 <td><span class="status pending">Pending</span></td>
-                <td>Use placeholders until full game verification.</td>
+                <td>Use placeholders until full-game verification.</td>
               </tr>
               <tr>
                 <td>Endings and quest outcomes</td>
@@ -223,47 +247,33 @@
         </div>
       </section>
 
-      <section class="section tools" aria-labelledby="tools-title">
-        <div class="section-head compact">
-          <p class="eyebrow">Interactive utilities</p>
-          <h2 id="tools-title">Features Worth Building Next</h2>
-        </div>
-        <div class="tool-grid">
-          <button class="tool active" data-target="route">Route Planner</button>
-          <button class="tool" data-target="build">Build Finder</button>
-          <button class="tool" data-target="boss">Boss Checklist</button>
-        </div>
-        <div class="tool-output" id="tool-output" aria-live="polite">
-          Prioritize a spoiler-safe route planner with quest flags, locked paths, and ending-impact
-          warnings. It turns the site from a blog into a repeat-visit guide tool.
-        </div>
-      </section>
-
       <section class="section faq" id="faq" aria-labelledby="faq-title">
         <div class="section-head compact">
           <p class="eyebrow">Search questions</p>
           <h2 id="faq-title">FAQ</h2>
         </div>
         <details open>
+          <summary>When does Phantom Blade Zero release?</summary>
+          <p>
+            The current listed release date used by this wiki is September 9, 2026. Release timing
+            can change before launch, so the release page should be checked before GSC submission
+            and again when official storefronts update.
+          </p>
+        </details>
+        <details>
           <summary>Is Phantom Blade Zero a Soulslike?</summary>
           <p>
-            The safest editorial answer is: it shares some strategic-action audience overlap, but
-            official messaging frames it around wuxia/kungfupunk action, fast martial-arts flow,
+            The safest editorial answer is that it shares some strategic-action audience overlap,
+            while official messaging frames it around kungfupunk action, fast martial-arts flow,
             and handcrafted encounters rather than a pure Soulslike label.
           </p>
         </details>
         <details>
-          <summary>Who do you play as?</summary>
+          <summary>What should be published before launch?</summary>
           <p>
-            You play as Soul, an elite assassin framed for the murder of The Order's patriarch and
-            given a limited time to uncover the conspiracy.
-          </p>
-        </details>
-        <details>
-          <summary>What should the site publish before launch?</summary>
-          <p>
-            Release hub, platform hub, combat glossary, trailer breakdowns, demo impressions,
-            confirmed weapons, boss preview pages, and a strict rumor policy.
+            Release hub, platform hub, beginner guide, combat glossary, trailer breakdowns,
+            confirmed weapons, boss preview pages, About page, sitemap, robots file, and a strict
+            rumor policy.
           </p>
         </details>
       </section>
@@ -271,21 +281,23 @@
       <section class="section sources" aria-labelledby="sources-title">
         <h2 id="sources-title">Research Notes</h2>
         <p>
-          Built from public pre-release information, especially S-GAME's PlayStation Blog overview
-          of the world, Soul, Kungfupunk direction, semi-open maps, and handcrafted martial-arts
-          action. Storefront and wiki-derived release/platform data should be rechecked before
-          publication.
+          Built from public pre-release information, especially S-GAME's official materials and the
+          PlayStation Blog overview of the world, Soul, kungfupunk direction, semi-open maps, and
+          handcrafted martial-arts action. Storefront details should be rechecked before publication.
         </p>
         <a href="https://blog.playstation.com/2023/05/24/phantom-blade-zero-a-new-beginning-in-a-long-journey/">PlayStation Blog source</a>
         <a href="https://pbz.s-game.com/">Official site</a>
+        <a href="./sitemap.xml">Sitemap</a>
       </section>
     </main>
 
     <footer class="footer">
       <p>Unofficial fan-made guide concept. Phantom Blade Zero and related marks belong to their owners.</p>
+      <a href="./about/">About</a>
       <a href="#top">Back to top</a>
     </footer>
 
     <script src="./script.js"></script>
   </body>
 </html>
+

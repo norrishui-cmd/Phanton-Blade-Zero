@@ -178,7 +178,7 @@ h3 {
 .hero-actions {
   flex-wrap: wrap;
   gap: 12px;
-  margin: 28px 0 34px;
+  margin: 24px 0 28px;
 }
 
 .button {
@@ -226,6 +226,55 @@ h3 {
 .facts dd {
   margin: 2px 0 0;
   font-weight: 800;
+}
+
+.countdown {
+  width: min(620px, 100%);
+  margin: 26px 0 0;
+  border: 1px solid rgba(246, 240, 232, 0.18);
+  background: rgba(17, 16, 15, 0.62);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.34);
+}
+
+.countdown-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(246, 240, 232, 0.14);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.countdown-head strong {
+  color: var(--ink);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.countdown-grid div {
+  padding: 14px 12px;
+  border-right: 1px solid rgba(246, 240, 232, 0.12);
+}
+
+.countdown-grid div:last-child {
+  border-right: 0;
+}
+
+.countdown-grid strong {
+  display: block;
+  font-size: clamp(1.55rem, 4vw, 2.55rem);
+  line-height: 1;
+}
+
+.countdown-grid span {
+  color: var(--dim);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .ticker {
@@ -306,11 +355,17 @@ details p {
 }
 
 .guide-card a {
-  display: inline-block;
-  margin-top: 8px;
   color: var(--jade);
   font-weight: 800;
   text-decoration: none;
+}
+
+.guide-card h3 a {
+  color: var(--ink);
+}
+
+.guide-card:hover {
+  border-color: rgba(106, 182, 161, 0.5);
 }
 
 .tag {
@@ -501,6 +556,7 @@ details p {
 
 .footer {
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18px;
   padding: 26px clamp(18px, 5vw, 72px);
   color: var(--dim);
@@ -514,6 +570,99 @@ details p {
 .footer a {
   color: var(--ink);
   text-decoration: none;
+}
+
+.page-hero {
+  padding: 138px clamp(18px, 5vw, 72px) 54px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(190, 52, 45, 0.16), transparent 38%),
+    linear-gradient(180deg, #171412, #11100f);
+}
+
+.page-hero h1 {
+  max-width: 860px;
+}
+
+.page-hero p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.45fr);
+  gap: clamp(24px, 5vw, 56px);
+}
+
+.article-body {
+  color: var(--muted);
+}
+
+.article-body h2 {
+  margin-top: 34px;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+.article-body h2:first-child {
+  margin-top: 0;
+}
+
+.article-body a {
+  color: var(--jade);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.article-body li + li {
+  margin-top: 8px;
+}
+
+.toc {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 18px;
+}
+
+.toc h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.toc a {
+  display: block;
+  padding: 8px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-top: 1px solid rgba(246, 240, 232, 0.08);
+}
+
+.toc a:hover {
+  color: var(--ink);
+}
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.mini-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 18px;
+}
+
+.mini-card strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 6px;
 }
 
 @media (max-width: 900px) {
@@ -534,8 +683,14 @@ details p {
   .boss-layout,
   .split,
   .tracker,
-  .tool-grid {
+  .tool-grid,
+  .content-grid,
+  .mini-cards {
     grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: static;
   }
 
   .guide-card.featured {
@@ -555,6 +710,22 @@ details p {
 
   .facts div {
     width: 100%;
+  }
+
+  .countdown-head {
+    flex-direction: column;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .countdown-grid div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .countdown-grid div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(246, 240, 232, 0.12);
   }
 
   .footer {
