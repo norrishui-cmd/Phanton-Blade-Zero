@@ -1,0 +1,22 @@
+cluster,candidate_urls_90_days,seed_urls_live_now,example_pattern,publish_gate
+Core hubs,30,11,/{release-date|platforms|story|combat-guide|weapons|bosses}/,Public official or storefront information
+Release and platform long-tail,80,0,/release-date/{timezone|preload|editions|pc|ps5}/,Official storefront or publisher confirmation
+Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game codex text
+Characters,80,1,/characters/{character-slug}/,Official name or in-game encounter
+Combat mechanics,150,4,/combat/{mechanic-slug}/,Tutorial term or tested mechanic
+Weapons,180,0,/weapons/{weapon-slug}/,Weapon acquired and tested in-game
+Phantom Edges,120,1,/phantom-edges/{edge-slug}/,Phantom Edge acquired and tested in-game
+Bosses and elites,220,0,/bosses/{boss-slug}/,Verified boss name and completed strategy
+Boss matchup pages,280,0,/bosses/{boss-slug}/{weapon-slug}-strategy/,Verified boss plus tested weapon matchup
+Regions and maps,150,0,/maps/{region-slug}/,Verified region name and route data
+Walkthrough chapters,180,0,/walkthrough/{chapter-or-region-slug}/,Completed route with screenshots or notes
+Side quests,160,1,/side-quests/{quest-slug}/,Verified quest start and outcome
+Endings and choices,70,1,/endings/{ending-or-choice-slug}/,Verified ending condition or choice outcome
+Builds,150,0,/builds/{build-slug}/,Tested weapon plus Phantom Edge setup
+Collectibles and materials,220,0,/items/{item-slug}/,Verified item location and use
+Achievements,80,0,/achievements/{achievement-slug}/,Verified achievement list
+Settings and troubleshooting,80,1,/settings/{pc-performance|controller|accessibility}/,Verified platform setting or user problem
+Patch notes and updates,50,0,/updates/{version-slug}/,Official patch or announcement
+Trailer breakdowns,50,1,/trailers/{trailer-slug}/,Official trailer with timestamped analysis
+FAQ question pages,70,1,/questions/{question-slug}/,Distinct search question with non-duplicate answer
+Total,2500,28,,Publish the best 2000 only after quality review
