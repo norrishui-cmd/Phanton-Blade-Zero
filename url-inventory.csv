@@ -1,6 +1,6 @@
 cluster,candidate_urls_90_days,seed_urls_live_now,example_pattern,publish_gate
 Core hubs,30,12,/{release-date|platforms|story|combat-guide|weapons|bosses|maps|items}/,Public official or storefront information
-Release and platform long-tail,80,0,/release-date/{timezone|preload|editions|pc|ps5}/,Official storefront or publisher confirmation
+Release and platform long-tail,80,3,/release-date/{timezone|preload|editions|pc|ps5}/,Official storefront or publisher confirmation
 Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game codex text
 Characters,80,1,/characters/{character-slug}/,Official name or in-game encounter
 Combat mechanics,150,7,/combat/{mechanic-slug}/,Tutorial term or tested mechanic
@@ -15,12 +15,14 @@ Endings and choices,70,1,/endings/{ending-or-choice-slug}/,Verified ending condi
 Builds,150,0,/builds/{build-slug}/,Tested weapon plus Phantom Edge setup
 Items and upgrade materials,220,1,/items/{item-slug}/,Verified item location and use
 Achievements and trophies,80,1,/achievements/{achievement-slug}/,Verified achievement list
-Settings and troubleshooting,110,4,/settings/{pc-performance|controller|accessibility|camera|graphics}/,Verified platform setting or user problem
+Settings and troubleshooting,110,6,/settings/{pc-performance|controller|accessibility|camera|graphics}/,Verified platform setting or user problem
 Glossary and terminology,80,1,/glossary/{term-slug}/,Official term or in-game terminology
 Patch notes and updates,70,1,/updates/{version-or-news-slug}/,Official patch or announcement
 Trailer breakdowns,50,1,/trailers/{trailer-slug}/,Official trailer with timestamped analysis
-FAQ question pages,80,6,/questions/{question-slug}/,Distinct search question with non-duplicate answer
+FAQ question pages,80,7,/questions/{question-slug}/,Distinct search question with non-duplicate answer
 Spoiler-free utility guides,90,3,/guides/{utility-guide-slug}/,Useful evergreen player workflow with no fabricated details
 Comparison intent pages,40,1,/comparisons/{comparison-slug}/,Careful comparison that states assumptions and verification needs
 Editorial and SEO operations,20,4,/{about|site-architecture|seo-roadmap}/,Useful to users or operators; avoid over-indexing ops pages
-Total,2760,50,,Publish the best 2000 only after quality review
+Static search and trust pages,20,2,/{search|sources}/,Useful crawlable navigation or verification policy page
+Platform storefront pages,80,3,/platforms/{steam|ps5|pc-system-requirements}/,Official storefront or platform-specific user need
+Total,2860,61,,Publish the best 2000 only after quality review
