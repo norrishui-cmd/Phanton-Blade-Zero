@@ -48,4 +48,4 @@ Next-stage SEO expansion focused on technical SEO infrastructure, release-date f
 - 71 sitemap URLs.
 - 71 canonical tags.
 - Old September 9, 2026 date appears only in release-date-change context and changelog notes.
-- No `example.com`, old domain text, or encoding garbage found.
+- No placeholder domain text, old domain text, or encoding garbage found.

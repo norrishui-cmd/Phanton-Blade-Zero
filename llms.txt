@@ -8,12 +8,15 @@ This site covers release tracking, platforms, beginner help, combat mechanics, w
 
 - Home: https://phantonbladezero.wiki/
 - Sitemap: https://phantonbladezero.wiki/sitemap.xml
+- Sitemap index: https://phantonbladezero.wiki/sitemap-index.xml
+- HTML sitemap: https://phantonbladezero.wiki/html-sitemap/
 - Release date: https://phantonbladezero.wiki/release-date/
 - Sources and verification: https://phantonbladezero.wiki/sources/
 - Glossary: https://phantonbladezero.wiki/glossary/
 - Combat guide: https://phantonbladezero.wiki/combat-guide/
 - Bosses: https://phantonbladezero.wiki/bosses/
 - Maps: https://phantonbladezero.wiki/maps/
+- Publishing templates: https://phantonbladezero.wiki/templates/boss-guide-template/
 
 ## Editorial Policy
 

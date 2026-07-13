@@ -4,6 +4,7 @@ Release and platform long-tail,80,3,/release-date/{timezone|preload|editions|pc|
 Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game codex text
 Characters,80,1,/characters/{character-slug}/,Official name or in-game encounter
 Combat mechanics,150,7,/combat/{mechanic-slug}/,Tutorial term or tested mechanic
+Combat comparison and fundamentals,90,1,/combat/{defense-guide|advanced-topic}/,Useful framework or tested mechanic
 Weapons,180,0,/weapons/{weapon-slug}/,Weapon acquired and tested in-game
 Phantom Edges,120,1,/phantom-edges/{edge-slug}/,Phantom Edge acquired and tested in-game
 Bosses and elites,220,0,/bosses/{boss-slug}/,Verified boss name and completed strategy
@@ -23,10 +24,15 @@ Patch notes and updates,70,1,/updates/{version-or-news-slug}/,Official patch or 
 Trailer breakdowns,50,1,/trailers/{trailer-slug}/,Official trailer with timestamped analysis
 FAQ question pages,80,7,/questions/{question-slug}/,Distinct search question with non-duplicate answer
 Spoiler-free utility guides,90,3,/guides/{utility-guide-slug}/,Useful evergreen player workflow with no fabricated details
+Beginner utility guides,90,1,/guides/{beginner-topic}/,Evergreen player help that avoids unverified specifics
 Comparison intent pages,40,1,/comparisons/{comparison-slug}/,Careful comparison that states assumptions and verification needs
 Editorial and SEO operations,20,4,/{about|site-architecture|seo-roadmap}/,Useful to users or operators; avoid over-indexing ops pages
 Static search and trust pages,20,2,/{search|sources}/,Useful crawlable navigation or verification policy page
 Platform storefront pages,80,3,/platforms/{steam|ps5|pc-system-requirements}/,Official storefront or platform-specific user need
 Best-of guide pages,80,2,/{weapons|phantom-edges}/best-*/,Rank only after tested data or use as framework before launch
 Route and missable planning,90,2,/{walkthrough|side-quests}/*/,Verified route or transparent pre-launch framework
-Total,3310,71,,Publish the best 2000 only after quality review
+Publishing templates,40,4,/templates/{template-slug}/,Editorial operations page with concrete publish gates
+HTML navigation pages,20,1,/{html-sitemap}/,Useful crawlable navigation page
+Additional comparison pages,70,2,/comparisons/{game-comparison-slug}/,Careful comparison that avoids unsupported equivalence claims
+Additional platform questions,70,3,/questions/{platform-or-feature-question}/,Distinct platform or feature question with verification policy
+Total,3690,84,,Publish the best 2000 only after quality review
