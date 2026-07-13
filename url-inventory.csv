@@ -14,6 +14,8 @@ Side quests,160,1,/side-quests/{quest-slug}/,Verified quest start and outcome
 Endings and choices,70,1,/endings/{ending-or-choice-slug}/,Verified ending condition or choice outcome
 Builds,150,0,/builds/{build-slug}/,Tested weapon plus Phantom Edge setup
 Items and upgrade materials,220,1,/items/{item-slug}/,Verified item location and use
+Collectibles,160,1,/collectibles/{collectible-slug}/,Verified collectible name location and use
+Upgrade materials,120,1,/materials/{material-slug}/,Verified material name source and upgrade use
 Achievements and trophies,80,1,/achievements/{achievement-slug}/,Verified achievement list
 Settings and troubleshooting,110,6,/settings/{pc-performance|controller|accessibility|camera|graphics}/,Verified platform setting or user problem
 Glossary and terminology,80,1,/glossary/{term-slug}/,Official term or in-game terminology
@@ -25,4 +27,6 @@ Comparison intent pages,40,1,/comparisons/{comparison-slug}/,Careful comparison 
 Editorial and SEO operations,20,4,/{about|site-architecture|seo-roadmap}/,Useful to users or operators; avoid over-indexing ops pages
 Static search and trust pages,20,2,/{search|sources}/,Useful crawlable navigation or verification policy page
 Platform storefront pages,80,3,/platforms/{steam|ps5|pc-system-requirements}/,Official storefront or platform-specific user need
-Total,2860,61,,Publish the best 2000 only after quality review
+Best-of guide pages,80,2,/{weapons|phantom-edges}/best-*/,Rank only after tested data or use as framework before launch
+Route and missable planning,90,2,/{walkthrough|side-quests}/*/,Verified route or transparent pre-launch framework
+Total,3310,71,,Publish the best 2000 only after quality review

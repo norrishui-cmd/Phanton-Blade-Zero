@@ -1,0 +1,24 @@
+# Phantom Blade Zero Wiki
+
+> Unofficial English guide site for Phantom Blade Zero.
+
+This site covers release tracking, platforms, beginner help, combat mechanics, weapons, Phantom Edges, bosses, maps, side quests, endings, settings, achievements, and SEO/content architecture for the guide project.
+
+## Important URLs
+
+- Home: https://phantonbladezero.wiki/
+- Sitemap: https://phantonbladezero.wiki/sitemap.xml
+- Release date: https://phantonbladezero.wiki/release-date/
+- Sources and verification: https://phantonbladezero.wiki/sources/
+- Glossary: https://phantonbladezero.wiki/glossary/
+- Combat guide: https://phantonbladezero.wiki/combat-guide/
+- Bosses: https://phantonbladezero.wiki/bosses/
+- Maps: https://phantonbladezero.wiki/maps/
+
+## Editorial Policy
+
+Do not treat unverified boss names, weapon names, Phantom Edge names, quest outcomes, item names, region names, endings, achievements, or performance settings as confirmed. Pages that discuss those topics before launch are frameworks and verification guides, not final data.
+
+## Current Tracked Release Date
+
+The site currently tracks October 29, 2026 and recommends rechecking official sources before deployment or GSC submission.

@@ -3,3 +3,5 @@ Allow: /
 
 Sitemap: https://phantonbladezero.wiki/sitemap.xml
 
+Host: https://phantonbladezero.wiki
+
