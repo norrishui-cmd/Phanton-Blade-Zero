@@ -5,6 +5,7 @@ Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game c
 Characters,80,1,/characters/{character-slug}/,Official name or in-game encounter
 Combat mechanics,150,7,/combat/{mechanic-slug}/,Tutorial term or tested mechanic
 Combat comparison and fundamentals,90,1,/combat/{defense-guide|advanced-topic}/,Useful framework or tested mechanic
+Advanced combat guides,100,2,/combat/{advanced-combat|resource-management}/,Verified mechanic or useful framework
 Weapons,180,0,/weapons/{weapon-slug}/,Weapon acquired and tested in-game
 Phantom Edges,120,1,/phantom-edges/{edge-slug}/,Phantom Edge acquired and tested in-game
 Bosses and elites,220,0,/bosses/{boss-slug}/,Verified boss name and completed strategy
@@ -19,10 +20,12 @@ Collectibles,160,1,/collectibles/{collectible-slug}/,Verified collectible name l
 Upgrade materials,120,1,/materials/{material-slug}/,Verified material name source and upgrade use
 Achievements and trophies,80,1,/achievements/{achievement-slug}/,Verified achievement list
 Settings and troubleshooting,110,6,/settings/{pc-performance|controller|accessibility|camera|graphics}/,Verified platform setting or user problem
+Settings subtopics,90,3,/settings/{best-settings|hud|language-subtitles}/,Menu verified or high-value settings framework
 Glossary and terminology,80,1,/glossary/{term-slug}/,Official term or in-game terminology
 Patch notes and updates,70,1,/updates/{version-or-news-slug}/,Official patch or announcement
 Trailer breakdowns,50,1,/trailers/{trailer-slug}/,Official trailer with timestamped analysis
 FAQ question pages,80,7,/questions/{question-slug}/,Distinct search question with non-duplicate answer
+Question hub pages,60,4,/questions/{hub-or-feature-question}/,Distinct search question or hub with useful internal links
 Spoiler-free utility guides,90,3,/guides/{utility-guide-slug}/,Useful evergreen player workflow with no fabricated details
 Beginner utility guides,90,1,/guides/{beginner-topic}/,Evergreen player help that avoids unverified specifics
 Comparison intent pages,40,1,/comparisons/{comparison-slug}/,Careful comparison that states assumptions and verification needs
@@ -35,4 +38,7 @@ Publishing templates,40,4,/templates/{template-slug}/,Editorial operations page 
 HTML navigation pages,20,1,/{html-sitemap}/,Useful crawlable navigation page
 Additional comparison pages,70,2,/comparisons/{game-comparison-slug}/,Careful comparison that avoids unsupported equivalence claims
 Additional platform questions,70,3,/questions/{platform-or-feature-question}/,Distinct platform or feature question with verification policy
-Total,3690,84,,Publish the best 2000 only after quality review
+Cluster landing pages,80,4,/{questions|comparisons|templates|guides}/,Hub page that improves crawl depth and topical grouping
+Story and lore subtopics,80,2,/{story|lore}/{subtopic}/,Spoiler-safe story or verified lore framework
+Platform comparison pages,60,1,/platforms/{comparison-slug}/,Useful platform decision framework
+Total,4160,98,,Publish the best 2000 only after quality review
