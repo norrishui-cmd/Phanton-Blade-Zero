@@ -1,4 +1,4 @@
-cluster,candidate_urls_90_days,seed_urls_live_now,example_pattern,publish_gate
+﻿cluster,candidate_urls_90_days,seed_urls_live_now,example_pattern,publish_gate
 Core hubs,30,12,/{release-date|platforms|story|combat-guide|weapons|bosses|maps|items}/,Public official or storefront information
 Release and platform long-tail,80,3,/release-date/{timezone|preload|editions|pc|ps5}/,Official storefront or publisher confirmation
 Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game codex text
@@ -41,4 +41,5 @@ Additional platform questions,70,3,/questions/{platform-or-feature-question}/,Di
 Cluster landing pages,80,4,/{questions|comparisons|templates|guides}/,Hub page that improves crawl depth and topical grouping
 Story and lore subtopics,80,2,/{story|lore}/{subtopic}/,Spoiler-safe story or verified lore framework
 Platform comparison pages,60,1,/platforms/{comparison-slug}/,Useful platform decision framework
-Total,4160,98,,Publish the best 2000 only after quality review
+SEO operations pages,60,6,/seo/{operation-slug}/,Useful technical SEO operations page with concrete policy`r`nAdditional feature questions,80,4,/questions/{feature-question}/,Distinct feature question with verification policy`r`nTotal,4300,108,,Publish the best 2000 only after quality review
+
