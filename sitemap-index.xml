@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://phantonbladezero.wiki/sitemap-core.xml</loc><lastmod>2026-07-15</lastmod></sitemap>
-  <sitemap><loc>https://phantonbladezero.wiki/sitemap-combat.xml</loc><lastmod>2026-07-15</lastmod></sitemap>
-  <sitemap><loc>https://phantonbladezero.wiki/sitemap-story.xml</loc><lastmod>2026-07-15</lastmod></sitemap>
-  <sitemap><loc>https://phantonbladezero.wiki/sitemap-technical.xml</loc><lastmod>2026-07-15</lastmod></sitemap>
-  <sitemap><loc>https://phantonbladezero.wiki/sitemap-ops.xml</loc><lastmod>2026-07-15</lastmod></sitemap>
+  <sitemap><loc>https://phantombladezerowiki.wiki/sitemap-core.xml</loc><lastmod>2026-07-17</lastmod></sitemap>
+  <sitemap><loc>https://phantombladezerowiki.wiki/sitemap-combat.xml</loc><lastmod>2026-07-17</lastmod></sitemap>
+  <sitemap><loc>https://phantombladezerowiki.wiki/sitemap-story.xml</loc><lastmod>2026-07-17</lastmod></sitemap>
+  <sitemap><loc>https://phantombladezerowiki.wiki/sitemap-technical.xml</loc><lastmod>2026-07-17</lastmod></sitemap>
 </sitemapindex>

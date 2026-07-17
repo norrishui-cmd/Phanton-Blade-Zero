@@ -1,45 +1,14 @@
-﻿cluster,candidate_urls_90_days,seed_urls_live_now,example_pattern,publish_gate
-Core hubs,30,12,/{release-date|platforms|story|combat-guide|weapons|bosses|maps|items}/,Public official or storefront information
-Release and platform long-tail,80,3,/release-date/{timezone|preload|editions|pc|ps5}/,Official storefront or publisher confirmation
-Story and lore,120,4,/lore/{faction|region|term}/,Official material or in-game codex text
-Characters,80,1,/characters/{character-slug}/,Official name or in-game encounter
-Combat mechanics,150,7,/combat/{mechanic-slug}/,Tutorial term or tested mechanic
-Combat comparison and fundamentals,90,1,/combat/{defense-guide|advanced-topic}/,Useful framework or tested mechanic
-Advanced combat guides,100,2,/combat/{advanced-combat|resource-management}/,Verified mechanic or useful framework
-Weapons,180,0,/weapons/{weapon-slug}/,Weapon acquired and tested in-game
-Phantom Edges,120,1,/phantom-edges/{edge-slug}/,Phantom Edge acquired and tested in-game
-Bosses and elites,220,0,/bosses/{boss-slug}/,Verified boss name and completed strategy
-Boss matchup pages,280,0,/bosses/{boss-slug}/{weapon-slug}-strategy/,Verified boss plus tested weapon matchup
-Regions and maps,150,1,/maps/{region-slug}/,Verified region name and route data
-Walkthrough chapters,180,0,/walkthrough/{chapter-or-region-slug}/,Completed route with screenshots or notes
-Side quests,160,1,/side-quests/{quest-slug}/,Verified quest start and outcome
-Endings and choices,70,1,/endings/{ending-or-choice-slug}/,Verified ending condition or choice outcome
-Builds,150,0,/builds/{build-slug}/,Tested weapon plus Phantom Edge setup
-Items and upgrade materials,220,1,/items/{item-slug}/,Verified item location and use
-Collectibles,160,1,/collectibles/{collectible-slug}/,Verified collectible name location and use
-Upgrade materials,120,1,/materials/{material-slug}/,Verified material name source and upgrade use
-Achievements and trophies,80,1,/achievements/{achievement-slug}/,Verified achievement list
-Settings and troubleshooting,110,6,/settings/{pc-performance|controller|accessibility|camera|graphics}/,Verified platform setting or user problem
-Settings subtopics,90,3,/settings/{best-settings|hud|language-subtitles}/,Menu verified or high-value settings framework
-Glossary and terminology,80,1,/glossary/{term-slug}/,Official term or in-game terminology
-Patch notes and updates,70,1,/updates/{version-or-news-slug}/,Official patch or announcement
-Trailer breakdowns,50,1,/trailers/{trailer-slug}/,Official trailer with timestamped analysis
-FAQ question pages,80,7,/questions/{question-slug}/,Distinct search question with non-duplicate answer
-Question hub pages,60,4,/questions/{hub-or-feature-question}/,Distinct search question or hub with useful internal links
-Spoiler-free utility guides,90,3,/guides/{utility-guide-slug}/,Useful evergreen player workflow with no fabricated details
-Beginner utility guides,90,1,/guides/{beginner-topic}/,Evergreen player help that avoids unverified specifics
-Comparison intent pages,40,1,/comparisons/{comparison-slug}/,Careful comparison that states assumptions and verification needs
-Editorial and SEO operations,20,4,/{about|site-architecture|seo-roadmap}/,Useful to users or operators; avoid over-indexing ops pages
-Static search and trust pages,20,2,/{search|sources}/,Useful crawlable navigation or verification policy page
-Platform storefront pages,80,3,/platforms/{steam|ps5|pc-system-requirements}/,Official storefront or platform-specific user need
-Best-of guide pages,80,2,/{weapons|phantom-edges}/best-*/,Rank only after tested data or use as framework before launch
-Route and missable planning,90,2,/{walkthrough|side-quests}/*/,Verified route or transparent pre-launch framework
-Publishing templates,40,4,/templates/{template-slug}/,Editorial operations page with concrete publish gates
-HTML navigation pages,20,1,/{html-sitemap}/,Useful crawlable navigation page
-Additional comparison pages,70,2,/comparisons/{game-comparison-slug}/,Careful comparison that avoids unsupported equivalence claims
-Additional platform questions,70,3,/questions/{platform-or-feature-question}/,Distinct platform or feature question with verification policy
-Cluster landing pages,80,4,/{questions|comparisons|templates|guides}/,Hub page that improves crawl depth and topical grouping
-Story and lore subtopics,80,2,/{story|lore}/{subtopic}/,Spoiler-safe story or verified lore framework
-Platform comparison pages,60,1,/platforms/{comparison-slug}/,Useful platform decision framework
-SEO operations pages,60,6,/seo/{operation-slug}/,Useful technical SEO operations page with concrete policy`r`nAdditional feature questions,80,4,/questions/{feature-question}/,Distinct feature question with verification policy`r`nTotal,4300,108,,Publish the best 2000 only after quality review
-
+cluster,target_urls,example_pattern,publish_gate,launch_source
+Core hubs and evergreen guides,80,/{release-date|platforms|faq|guides}/,Distinct intent plus confirmed direct answer,Official pages and tested fundamentals
+Main-story walkthrough,180,/walkthrough/{chapter-or-objective}/,Completed route with prerequisites steps and outcome,In-game capture
+Side quests,260,/side-quests/{quest-slug}/,Verified start exact steps choices rewards and bugs,In-game capture
+Bosses and enemies,220,/bosses/{boss-or-enemy-slug}/,Verified name location strategy counters and rewards,In-game capture
+Weapons and Phantom Edges,180,/{weapons|phantom-edges}/{entity-slug}/,Acquired entity with moves effects upgrades and pairing,In-game plus official listing
+Builds and combat setups,240,/builds/{playstyle-or-matchup-slug}/,Tested setup that solves a distinct player problem,In-game testing
+Items and materials,260,/{items|materials}/{entity-slug}/,Verified location use farming route and upgrade cost,In-game capture
+Maps and locations,180,/maps/{region-or-location-slug}/,Verified routes NPCs secrets items and shortcuts,In-game capture
+Collectibles and achievements,170,/{collectibles|achievements}/{entity-slug}/,Verified unlock location missable status and checklist,In-game capture
+Characters factions and lore,90,/{characters|lore}/{entity-slug}/,Official or in-game identity with linked quests and locations,Official material and codex
+Platforms settings and fixes,80,/{platforms|settings|fixes}/{intent-slug}/,Verified setting benchmark or reproduced problem and fix,Official stores and testing
+Choices endings and New Game Plus,60,/{endings|choices|new-game-plus}/{intent-slug}/,Verified consequence requirement carryover or ending trigger,In-game testing
+Total,2000,,,Quality-approved live URLs by 2026-10-29

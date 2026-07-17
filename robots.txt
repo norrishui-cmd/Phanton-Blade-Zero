@@ -1,8 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://phantonbladezero.wiki/sitemap-index.xml
-Sitemap: https://phantonbladezero.wiki/sitemap.xml
-
-Host: https://phantonbladezero.wiki
-
+Sitemap: https://phantombladezerowiki.wiki/sitemap-index.xml
