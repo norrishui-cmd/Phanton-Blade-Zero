@@ -82,8 +82,19 @@ for (const file of htmlFiles) {
     else values[key].set(value, relative);
   }
 
-  const wordCount = strip(get(html, /<main[^>]*>([\s\S]*?)<\/main>/i)).split(/\s+/).filter(Boolean).length;
-  if (!noindex && wordCount < 140) warnings.push(`${relative}: only ${wordCount} main-content words`);
+  const mainText = strip(get(html, /<main[^>]*>([\s\S]*?)<\/main>/i));
+  const wordCount = mainText.split(/\s+/).filter(Boolean).length;
+  const language = get(html, /<html\s+lang=["']([^"']+)["']/i).toLowerCase();
+  const cjkCount = (mainText.match(/[\u3040-\u30ff\u3400-\u9fff]/g) ?? []).length;
+  const localizedPath = new URL(pageUrl(file)).pathname.match(/^\/(de|ja)\//)?.[1];
+  if (!noindex && localizedPath) {
+    if (language !== localizedPath) errors.push(`${relative}: html lang must match localized path`);
+    for (const hreflang of ["en", "de", "ja", "x-default"]) {
+      if (!html.includes(`hreflang="${hreflang}"`)) errors.push(`${relative}: missing ${hreflang} hreflang`);
+    }
+  }
+  if (!noindex && language.startsWith("ja") && cjkCount < 250) warnings.push(`${relative}: only ${cjkCount} Japanese main-content characters`);
+  else if (!noindex && !language.startsWith("ja") && wordCount < 140) warnings.push(`${relative}: only ${wordCount} main-content words`);
 
   for (const match of html.matchAll(/href=["']([^"']+)["']/gi)) {
     if (!internalTargetExists(match[1], file, allFiles)) errors.push(`${relative}: broken internal link ${match[1]}`);
@@ -94,7 +105,7 @@ for (const file of htmlFiles) {
   }
 }
 
-const sitemapFiles = ["sitemap-core.xml", "sitemap-combat.xml", "sitemap-story.xml", "sitemap-technical.xml"];
+const sitemapFiles = ["sitemap-core.xml", "sitemap-combat.xml", "sitemap-story.xml", "sitemap-technical.xml", "sitemap-de.xml", "sitemap-ja.xml"];
 const sitemapUrls = new Set();
 for (const name of sitemapFiles) {
   const xml = await readFile(path.join(root, name), "utf8");

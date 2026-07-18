@@ -26,6 +26,8 @@ function pageUrl(file) {
 
 function bucket(url) {
   const pathname = new URL(url).pathname;
+  if (pathname === "/de/" || pathname.startsWith("/de/")) return "de";
+  if (pathname === "/ja/" || pathname.startsWith("/ja/")) return "ja";
   if (/^\/(combat|combat-guide|weapons|phantom-edges|bosses|builds|beginners-guide|difficulty|new-game-plus)(\/|$)/.test(pathname)) return "combat";
   if (/^\/(story|characters|lore|side-quests|walkthrough|endings|collectibles|achievements|maps|items|materials)(\/|$)/.test(pathname)) return "story";
   if (/^\/(platforms|settings|release-date|demo)(\/|$)/.test(pathname)) return "technical";
@@ -45,7 +47,7 @@ for (const file of htmlFiles) {
 }
 urls.sort();
 
-const groups = { core: [], combat: [], story: [], technical: [] };
+const groups = { core: [], combat: [], story: [], technical: [], de: [], ja: [] };
 for (const url of urls) groups[bucket(url)].push(url);
 
 // Remove the legacy operations sitemap so it cannot be submitted separately.
@@ -64,4 +66,4 @@ await writeFile(
   `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexRows}\n</sitemapindex>\n`,
 );
 
-console.log(`Generated four segmented sitemaps for ${urls.length} indexable URLs.`);
+console.log(`Generated six segmented sitemaps for ${urls.length} indexable URLs.`);
