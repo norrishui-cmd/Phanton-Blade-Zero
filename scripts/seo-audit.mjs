@@ -64,6 +64,8 @@ for (const file of htmlFiles) {
   const h1Count = (html.match(/<h1(?:\s|>)/gi) ?? []).length;
   const noindex = /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
   const isHome = pageUrl(file) === `${origin}/`;
+  const adsenseScriptCount = (html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-9505220977121599/g) ?? []).length;
+  const adsenseMetaCount = (html.match(/name=["']google-adsense-account["'][^>]*content=["']ca-pub-9505220977121599["']/g) ?? []).length;
 
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
@@ -71,6 +73,8 @@ for (const file of htmlFiles) {
   if (canonical && canonical !== pageUrl(file)) errors.push(`${relative}: canonical does not match page URL`);
   if (h1Count !== 1) errors.push(`${relative}: expected one H1, found ${h1Count}`);
   if (!noindex) indexableUrls.add(pageUrl(file));
+  if (adsenseScriptCount !== 1) errors.push(`${relative}: expected exactly one AdSense account script, found ${adsenseScriptCount}`);
+  if (adsenseMetaCount !== 1) errors.push(`${relative}: expected exactly one AdSense account meta tag, found ${adsenseMetaCount}`);
   if (!noindex && !isHome && !html.includes('"@type":"BreadcrumbList"')) {
     errors.push(`${relative}: indexable page is missing BreadcrumbList schema`);
   }
@@ -106,6 +110,8 @@ for (const file of htmlFiles) {
 }
 
 const sitemapFiles = ["sitemap-core.xml", "sitemap-combat.xml", "sitemap-story.xml", "sitemap-technical.xml", "sitemap-de.xml", "sitemap-ja.xml"];
+const adsText = (await readFile(path.join(root, "ads.txt"), "utf8")).trim();
+if (adsText !== "google.com, pub-9505220977121599, DIRECT, f08c47fec0942fa0") errors.push("ads.txt: publisher record is missing or incorrect");
 const sitemapUrls = new Set();
 for (const name of sitemapFiles) {
   const xml = await readFile(path.join(root, name), "utf8");
