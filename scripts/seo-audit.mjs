@@ -63,6 +63,7 @@ for (const file of htmlFiles) {
   const canonical = get(html, /<link\s+rel=["']canonical["']\s+href=["']([^"']*)["']/i);
   const h1Count = (html.match(/<h1(?:\s|>)/gi) ?? []).length;
   const noindex = /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const isHome = pageUrl(file) === `${origin}/`;
 
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
@@ -70,6 +71,9 @@ for (const file of htmlFiles) {
   if (canonical && canonical !== pageUrl(file)) errors.push(`${relative}: canonical does not match page URL`);
   if (h1Count !== 1) errors.push(`${relative}: expected one H1, found ${h1Count}`);
   if (!noindex) indexableUrls.add(pageUrl(file));
+  if (!noindex && !isHome && !html.includes('"@type":"BreadcrumbList"')) {
+    errors.push(`${relative}: indexable page is missing BreadcrumbList schema`);
+  }
 
   for (const [key, value] of Object.entries({ title, description, canonical })) {
     if (!value) continue;
