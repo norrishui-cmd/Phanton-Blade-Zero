@@ -29,7 +29,8 @@ function bucket(url) {
   if (pathname === "/de/" || pathname.startsWith("/de/")) return "de";
   if (pathname === "/ja/" || pathname.startsWith("/ja/")) return "ja";
   if (/^\/(combat|combat-guide|weapons|phantom-edges|bosses|builds|beginners-guide|difficulty|new-game-plus)(\/|$)/.test(pathname)) return "combat";
-  if (/^\/(story|characters|lore|side-quests|walkthrough|endings|collectibles|achievements|maps|items|materials)(\/|$)/.test(pathname)) return "story";
+  if (/^\/(story|characters|lore|gameplay|side-quests|walkthrough|endings|collectibles|achievements|maps|items|materials)(\/|$)/.test(pathname)) return "story";
+  if (/^\/(equipment)(\/|$)/.test(pathname)) return "combat";
   if (/^\/(platforms|settings|release-date|demo)(\/|$)/.test(pathname)) return "technical";
   return "core";
 }

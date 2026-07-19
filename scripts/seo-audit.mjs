@@ -55,6 +55,7 @@ const htmlFiles = [...allFiles].filter((file) => file.endsWith("index.html"));
 const values = { title: new Map(), description: new Map(), canonical: new Map() };
 const indexableUrls = new Set();
 const requiredFaqTabs = new Set(["release-date", "beginners-guide", "combat-guide", "weapons", "bosses", "about"]);
+const requiredRound8Pages = new Set(["characters/index.html","equipment/index.html","equipment/armor/index.html","equipment/artifacts/index.html","equipment/skills/index.html","equipment/enemy-weapons/index.html","equipment/signature-techniques/index.html","gameplay/index.html","gameplay/semi-open-world/index.html","gameplay/handcrafted-map-activities/index.html","gameplay/shifting-realities/index.html","gameplay/memory-echoes/index.html","gameplay/augmentation/index.html","gameplay/higher-powers/index.html","gameplay/66-day-premise/index.html"]);
 
 for (const file of htmlFiles) {
   const relative = path.relative(root, file);
@@ -68,6 +69,10 @@ for (const file of htmlFiles) {
   const isNewsArticle = /(^|[\\/])news[\\/][^\\/]+[\\/]index\.html$/.test(relative);
   const adsenseScriptCount = (html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-9505220977121599/g) ?? []).length;
   const adsenseMetaCount = (html.match(/name=["']google-adsense-account["'][^>]*content=["']ca-pub-9505220977121599["']/g) ?? []).length;
+  if (requiredRound8Pages.has(relative.replaceAll(path.sep,"/"))) {
+    if (!html.includes("Source and update status")) errors.push(`${relative}: Round 8 entity page is missing source/update disclosure`);
+    if (!/href="https:\/\/(store\.steampowered\.com|blog\.playstation\.com)/.test(html)) errors.push(`${relative}: Round 8 entity page is missing its primary-source link`);
+  }
 
   if (relative === "faq/index.html") {
     const faqDetails = (html.match(/<details id="faq-[^"]+"/g) ?? []).length;
