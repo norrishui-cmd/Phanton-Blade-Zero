@@ -69,6 +69,9 @@ for (const file of htmlFiles) {
   const isNewsArticle = /(^|[\\/])news[\\/][^\\/]+[\\/]index\.html$/.test(relative);
   const adsenseScriptCount = (html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-9505220977121599/g) ?? []).length;
   const adsenseMetaCount = (html.match(/name=["']google-adsense-account["'][^>]*content=["']ca-pub-9505220977121599["']/g) ?? []).length;
+  const languageMenus = (html.match(/<details class="language-menu"/g) ?? []).length;
+  if (languageMenus !== 1) errors.push(`${relative}: expected exactly one navigation language dropdown, found ${languageMenus}`);
+  for (const label of ["English","Deutsch","日本語"]) if (!html.includes(`>${label}</a>`)) errors.push(`${relative}: language dropdown is missing ${label}`);
   if (requiredRound8Pages.has(relative.replaceAll(path.sep,"/"))) {
     if (!html.includes("Source and update status")) errors.push(`${relative}: Round 8 entity page is missing source/update disclosure`);
     if (!/href="https:\/\/(store\.steampowered\.com|blog\.playstation\.com)/.test(html)) errors.push(`${relative}: Round 8 entity page is missing its primary-source link`);

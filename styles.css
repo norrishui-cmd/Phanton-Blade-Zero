@@ -733,3 +733,5 @@ details p {
     flex-direction: column;
   }
 }
+
+.language-menu{position:relative;margin-left:.35rem}.language-menu summary{display:flex;align-items:center;gap:.35rem;cursor:pointer;list-style:none;padding:.55rem .75rem;border:1px solid rgba(255,255,255,.2);border-radius:.55rem;font-weight:700}.language-menu summary::-webkit-details-marker{display:none}.language-options{position:absolute;right:0;top:calc(100% + .45rem);z-index:30;min-width:9rem;padding:.4rem;background:#111827;border:1px solid rgba(255,255,255,.18);border-radius:.65rem;box-shadow:0 12px 30px rgba(0,0,0,.35)}.language-options a{display:block;padding:.55rem .7rem;border-radius:.4rem;white-space:nowrap}.language-options a:hover{background:rgba(255,255,255,.1)}@media(max-width:760px){.language-menu{width:100%;margin:.35rem 0}.language-menu summary{justify-content:space-between}.language-options{position:static;margin-top:.35rem;width:100%;box-shadow:none}}
