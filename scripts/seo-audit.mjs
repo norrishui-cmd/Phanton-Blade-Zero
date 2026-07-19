@@ -64,6 +64,7 @@ for (const file of htmlFiles) {
   const h1Count = (html.match(/<h1(?:\s|>)/gi) ?? []).length;
   const noindex = /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
   const isHome = pageUrl(file) === `${origin}/`;
+  const isNewsArticle = /(^|[\\/])news[\\/][^\\/]+[\\/]index\.html$/.test(relative);
   const adsenseScriptCount = (html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-9505220977121599/g) ?? []).length;
   const adsenseMetaCount = (html.match(/name=["']google-adsense-account["'][^>]*content=["']ca-pub-9505220977121599["']/g) ?? []).length;
 
@@ -77,6 +78,9 @@ for (const file of htmlFiles) {
   if (adsenseMetaCount !== 1) errors.push(`${relative}: expected exactly one AdSense account meta tag, found ${adsenseMetaCount}`);
   if (!noindex && !isHome && !html.includes('"@type":"BreadcrumbList"')) {
     errors.push(`${relative}: indexable page is missing BreadcrumbList schema`);
+  }
+  if (!noindex && isNewsArticle && !html.includes('"@type":"NewsArticle"')) {
+    errors.push(`${relative}: news story is missing NewsArticle schema`);
   }
 
   for (const [key, value] of Object.entries({ title, description, canonical })) {
