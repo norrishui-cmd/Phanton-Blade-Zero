@@ -54,6 +54,7 @@ const allFiles = new Set(await walk(root));
 const htmlFiles = [...allFiles].filter((file) => file.endsWith("index.html"));
 const values = { title: new Map(), description: new Map(), canonical: new Map() };
 const indexableUrls = new Set();
+const requiredFaqTabs = new Set(["release-date", "beginners-guide", "combat-guide", "weapons", "bosses", "about"]);
 
 for (const file of htmlFiles) {
   const relative = path.relative(root, file);
@@ -67,6 +68,20 @@ for (const file of htmlFiles) {
   const isNewsArticle = /(^|[\\/])news[\\/][^\\/]+[\\/]index\.html$/.test(relative);
   const adsenseScriptCount = (html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-9505220977121599/g) ?? []).length;
   const adsenseMetaCount = (html.match(/name=["']google-adsense-account["'][^>]*content=["']ca-pub-9505220977121599["']/g) ?? []).length;
+
+  if (relative === "faq/index.html") {
+    const faqDetails = (html.match(/<details id="faq-[^"]+"/g) ?? []).length;
+    const faqQuestions = (html.match(/"@type":"Question"/g) ?? []).length;
+    if (faqDetails !== 50) errors.push(`${relative}: expected 50 visible FAQ entries, found ${faqDetails}`);
+    if (faqQuestions !== 50) errors.push(`${relative}: expected 50 FAQPage Question entities, found ${faqQuestions}`);
+  }
+  const topLevel = relative.replaceAll(path.sep, "/").match(/^([^/]+)\/index\.html$/)?.[1];
+  if (topLevel && requiredFaqTabs.has(topLevel)) {
+    const moduleCount = (html.match(new RegExp(`data-tab-faq="${topLevel}"`, "g")) ?? []).length;
+    const faqLinks = (html.match(/href="\.\.\/faq\/#faq-[^"]+"/g) ?? []).length;
+    if (moduleCount !== 1) errors.push(`${relative}: expected one contextual FAQ module, found ${moduleCount}`);
+    if (faqLinks < 5) errors.push(`${relative}: expected at least five contextual FAQ links, found ${faqLinks}`);
+  }
 
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
